@@ -2,6 +2,8 @@ package com.netfreak.videocall.user;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -35,6 +37,15 @@ public class UserController {
     @GetMapping
     public List<User> findAll() {
         return userService.findAll();
+    }
+
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String> handle(Exception ex) {
+        ex.printStackTrace();
+        return ResponseEntity
+                .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(ex.getMessage());
     }
 
 }

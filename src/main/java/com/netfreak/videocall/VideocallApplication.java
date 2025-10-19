@@ -1,7 +1,7 @@
 package com.netfreak.videocall;
 
-import com.netfreak.videocall.user.User;
-import com.netfreak.videocall.user.UserService;
+import com.netfreak.videocall.model.User;
+import com.netfreak.videocall.service.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -28,11 +28,6 @@ public class VideocallApplication {
                     .username("John")
                     .email("anet@gmail")
                     .password("890")
-                    .build());
-            service.register(User.builder()
-                    .username("ali")
-                    .email("afreak@gmail")
-                    .password("123")
                     .build());
         };
     }

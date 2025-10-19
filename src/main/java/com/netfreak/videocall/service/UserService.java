@@ -1,5 +1,6 @@
-package com.netfreak.videocall.user;
+package com.netfreak.videocall.service;
 
+import com.netfreak.videocall.model.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

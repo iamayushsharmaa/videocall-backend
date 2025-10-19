@@ -1,4 +1,4 @@
-package com.netfreak.videocall.user;
+package com.netfreak.videocall.model;
 
 import lombok.Builder;
 import lombok.Data;

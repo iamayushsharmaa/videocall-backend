@@ -1,5 +1,7 @@
-package com.netfreak.videocall.user;
+package com.netfreak.videocall.controller;
 
+import com.netfreak.videocall.model.User;
+import com.netfreak.videocall.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -7,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.stream.IntStream;
 
 @RestController
 @RequestMapping("/api/v1/users")
